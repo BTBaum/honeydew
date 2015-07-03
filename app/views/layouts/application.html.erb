@@ -8,13 +8,21 @@
 </head>
 <body>
 
-<% flash.each do |type, message| %>
-  <div class="alert flash <%= type %>">
-    <%= message %>
+  <div class="nav">
+    <h1><%= link_to "Honeydew", root_path %></h1>
+    <ul>
+      <li><%= link_to "Todo Lists", todo_lists_path %></li>
+    </ul>
+    <br class="clear" />
   </div>
-<% end %>
 
-<%= yield %>
+  <% flash.each do |type, message| %>
+    <div class="alert flash <%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>
