@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-let!(:todo_list) {Todolist.create(title: "Groceries", description: "Grocery list.")}
+let!(:todo_list) {TodoList.create(title: "Groceries", description: "Grocery list.")}
 
 describe "Editing todo lists" do 
   def update_todo_list(options={})
